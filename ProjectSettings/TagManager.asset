@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Checkpoint
-  - Obsticle
+  - LevelMenu
+  - Obstacle
+  - Finis
   layers:
   - Default
   - TransparentFX

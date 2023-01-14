@@ -14,7 +14,7 @@ public class Camera_Controller : MonoBehaviour
     private Vector3 _lookAheadPos;
     public float minDistance = 5, maxDistance = 15;
 
-    void LateUpdate()
+    private void LateUpdate()
     {
         CameraControl();
     }
@@ -54,5 +54,6 @@ public class Camera_Controller : MonoBehaviour
         Vector3 smoothedPosition = Vector3.SmoothDamp(transform.position, desiredPosition, ref _currentVelocity, smoothSpeed);
 
         transform.position = smoothedPosition;
+        
     }
 }

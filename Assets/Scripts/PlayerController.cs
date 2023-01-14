@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
- void Start()
+    private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
     }

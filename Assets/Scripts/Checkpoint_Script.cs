@@ -4,7 +4,6 @@ public class Checkpoint_Script : MonoBehaviour
 {
     
     public Transform character;
-    
     private Rigidbody _rb;
     private float3 _checkpointPosition;
 
@@ -15,7 +14,6 @@ public class Checkpoint_Script : MonoBehaviour
 
     void Update()
     {
-        
         Spawn();
     }
     private void OnTriggerEnter(Collider other)
@@ -24,10 +22,17 @@ public class Checkpoint_Script : MonoBehaviour
         {
             UpdateCheckpointPosition(other.transform.position);
         }
-       // if (other.gameObject.CompareTag("Kill"))
-       // {
-       //     character.position = _checkpointPosition;
-      //  }
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            character.position = _checkpointPosition;
+            Respawn();
+        }
+        if (other.gameObject.CompareTag("Finis"))
+        {
+            Destroy(other.gameObject);
+            
+        }
+       
     }
     private void UpdateCheckpointPosition(float3 position)
     {
