@@ -11,7 +11,7 @@ public class LevelSelection : MonoBehaviour
     public  GameObject MainMenu;
     public  GameObject LevelMenu;
     public  GameObject Canvas;
-    public GameObject NextLevel;
+ 
     public GameObject level1;
     public GameObject level2;
     public GameObject level3;
@@ -29,21 +29,21 @@ public class LevelSelection : MonoBehaviour
         MainMenu.SetActive(false);
         LevelMenu.SetActive(false);
         Canvas.SetActive(false);
-        Instantiate(level1, new Vector3(0, 0, 0), Quaternion.identity);
+        Instantiate(level1,Vector3.zero, Quaternion.identity);
     }
     public void Level2()
     {
         MainMenu.SetActive(false);
         LevelMenu.SetActive(false);
         Canvas.SetActive(false);
-        Instantiate(level2, new Vector3(0, 0, 0), Quaternion.identity);
+        Instantiate(level2, Vector3.zero, Quaternion.identity);
     }
     public void Level3()
     {
         MainMenu.SetActive(false);
         LevelMenu.SetActive(false);
         Canvas.SetActive(false);
-        Instantiate(level3, new Vector3(0, 0, 0), Quaternion.identity);
+        Instantiate(level3, Vector3.zero, Quaternion.identity);
     }
 
     

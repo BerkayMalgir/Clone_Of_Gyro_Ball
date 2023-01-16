@@ -29,8 +29,11 @@ public class Checkpoint_Script : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Finis"))
         {
-            Destroy(other.gameObject);
-            
+            EndGame();
+            Main_Menu.Instance.Canvas.SetActive(true);
+            Main_Menu.Instance.NextLevel.SetActive(true);
+           
+
         }
        
     }
@@ -50,6 +53,12 @@ public class Checkpoint_Script : MonoBehaviour
         _rb.angularVelocity =Vector3.zero;
         _rb.Sleep();
         character.position = _checkpointPosition;
+    }
+
+    private void EndGame() 
+    {
+        GameObject level = GameObject.FindWithTag("level1");
+        Destroy(level);
     }
 }
 

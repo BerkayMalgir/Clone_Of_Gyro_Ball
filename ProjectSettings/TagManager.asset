@@ -8,6 +8,7 @@ TagManager:
   - LevelMenu
   - Obstacle
   - Finis
+  - level1
   layers:
   - Default
   - TransparentFX
